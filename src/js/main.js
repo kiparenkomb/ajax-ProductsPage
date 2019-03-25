@@ -20,18 +20,24 @@ loadMoreButton.addEventListener('click', function() {
             if (productSet.length) {
                 productSet.map(function (name) {
                     productBox.innerHTML += (
-                        `<li class="productBox__item productBox__item--hidden js-productBox__item">
-                            <div class="productBox__imgBox">
-                                <img class="productBox__img" src="${name.img}" alt="${name.title}">
-                            </div>
-                            <h3 class="productBox__title">${name.title}</h3>
-                            <p class="productBox__description">${name.description}</p>
-                            <div class="productBox__cost">
-                                <span class="productBox__cost--discount">
-                                    ${name.discountCost ? `<span>${name.discountCost}</span>` : `<span>&#36;${name.cost.toFixed(2)}</span>`}
-                                </span>
-                                ${name.discountCost !== null ? `<span class="productBox__cost--old">&#36;${name.cost.toFixed(2)}</span><div class="productBox__banner productBox__banner--sale">Sale</div>` : ''}
-                                ${name.new ? `<div class="productBox__banner productBox__banner--new">New</div>`: ''}
+                        `<li class="gridBox__item gridBox__item--4column">
+                            <div class="productBox__item productBox__item--hidden js-productBox__item">
+                                <div class="productBox__imgBox">
+                                    <img class="productBox__img" src="${name.img}" alt="${name.title}">
+                                </div>
+                                <h3 class="productBox__title">${name.title}</h3>
+                                <p class="productBox__description">${name.description}</p>
+                                <div class="productBox__cost">
+                                    <span class="productBox__cost--discount">
+                                        ${name.discountCost ? `&#36;${name.discountCost.toFixed(2)}` : `&#36;${name.cost.toFixed(2)}`}
+                                    </span>
+                                    ${name.discountCost !== null ? `<span class="productBox__cost--old">&#36;${name.cost.toFixed(2)}</span><div class="productBox__banner productBox__banner--sale">Sale</div>` : ''}
+                                    ${name.new ? `<div class="productBox__banner productBox__banner--new">New</div>`: ''}
+                                </div>
+                                <div class="buttonBox">
+                                    <button class="buttonSite buttonSite--primary">Add to cart</button>
+                                    <a href="#" class="buttonSite buttonSite--secondary">View</a>
+                                </div>
                             </div>
                         </li>`
                     );

@@ -1,0 +1,37 @@
+.containerSite {
+    max-width: 1200px;
+    margin: 0 auto 73px;
+}
+
+.gridBox {
+    /*The grid-template-columns Property - not used in IE11
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        width: 100%;
+        @include breakpoint(tablet) {
+            width: 100%;
+        }
+        @include breakpoint(laptop) {
+            width: 33.33%;
+        }
+        @include breakpoint(desktop) {
+            width: 33.33%;
+        }
+
+        &--4column {
+            @include breakpoint(tablet) {
+                width: 50%;
+            }
+            @include breakpoint(laptop) {
+                width: 33.33%;
+            }
+            @include breakpoint(desktop) {
+                width: 25%;
+            }
+        }
+    }
+}

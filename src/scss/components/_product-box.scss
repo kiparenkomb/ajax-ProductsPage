@@ -3,45 +3,42 @@
         opacity: 0;
         transform: translateY(20px);
     }
-    90% {
-        opacity: 1;
-    }
     100% {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateX(0);
     }
 }
-.containerSite {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 .productBox {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
+    margin: 0 0 50px;
     padding: 0;
     list-style: none;
+
     &__item {
         position: relative;
         display: flex;
         flex-direction: column;
         width: 270px;
-        margin: 50px 10px 10px;
+        margin: 50px auto 10px;
         padding: 10px;
         background-color: $white;
         border: 1px solid $gray-light;
         transition: box-shadow 0.3s;
+
         &--hidden {
             display: none;
         }
+
         &.is-visible {
             animation: showProductItem ease-in-out .4s;
             animation-fill-mode: forwards;
         }
+
         &:hover {
             box-shadow: 0 3px 6px -2px $gray;
         }
     }
+
     &__imgBox {
         height: 250px;
         margin-top: -30px;
@@ -50,25 +47,30 @@
         text-align: center;
         border: 1px solid $gray-light;
     }
+
     &__img {
         max-height: 100%;
     }
+
     &__title {
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
     }
+
     &__description {
         color: $gray;
         font-size: 11px;
         font-weight: 300;
         line-height: 15px;
     }
+
     &__cost {
         font-size: 25px;
         font-weight: 400;
         line-height: 26px;
         text-transform: uppercase;
+
         &--old {
             position: relative;
             margin-left: 23px;
@@ -76,6 +78,7 @@
             font-size: 17px;
             font-weight: 400;
             line-height: 26px;
+
             &:after {
                 content: '';
                 position: absolute;
@@ -87,6 +90,7 @@
             }
         }
     }
+
     &__banner {
         position: absolute;
         top: 90px;
@@ -97,14 +101,15 @@
         line-height: 26px;
         text-transform: uppercase;
         letter-spacing: -0.26px;
+
         &--sale {
             background-color: $red;
             left: 10px;
         }
+
         &--new {
             background-color: $black;
             right: 10px;
         }
     }
-
 }

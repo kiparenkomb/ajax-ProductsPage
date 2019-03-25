@@ -1,18 +1,48 @@
-/*
-This file is been made to give you an example of what kind of files should
-be placed in this componets folder
-*/
-
-.button {
-  padding: 0 25px;
-  height: 35;
-  line-height: 35px;
-  &__main {
-    background-color: $main-color;
-    color: white;
+.buttonBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 28px;
+  button,
+  a {
+    width: 100%;
   }
-  &__secondary {
-    background-color: transparent;
-    color: $main-color;
+}
+
+.buttonSite {
+  display: block;
+  margin: 0 10px 0 auto;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 36px;
+  text-transform: uppercase;
+  letter-spacing: -0.26px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid $gray-light;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s, background-color .3s;
+  &:last-child {
+    margin-right: auto;
+  }
+  &--bigPadding {
+    padding: 0 28px;
+  }
+  &--center {
+    margin: 0 auto;
+  }
+  &--primary {
+    background-color: $white;
+    color: $red;
+  }
+  &--secondary {
+    background-color: $gray-secondary;
+    color: $gray;
+  }
+  &:hover {
+    background-color: $red;
+    color: $white;
+    text-decoration: none;
   }
 }

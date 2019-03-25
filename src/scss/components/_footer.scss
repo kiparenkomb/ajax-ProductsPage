@@ -1,0 +1,96 @@
+.footerSite {
+    &__item {
+        display: flex;
+        padding: 0 15px;
+    }
+
+    &__holder {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 27px 26px;
+        border: 1px solid #e5e5e5;
+    }
+
+    &__title {
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 58px;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        color: $gray-lighter;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 15px;
+
+        &--list {
+            list-style: none;
+            line-height: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: $gray-lighter;
+        }
+
+        .icon-arrow {
+            i {
+                font-size: 11px;
+                color: $red;
+                padding-right: 10px;
+            }
+        }
+
+        .icon-contact {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 30px;
+            line-height: 20px;
+
+            span {
+                display: block;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                font-size: 30px;
+                color: $red;
+                padding-right: 10px;
+                width: 30px;
+                height: 30px;
+            }
+
+            &.icon-location {
+                &::before {
+                    background: url('/img/icon_location.png') no-repeat;
+                }
+            }
+
+            &.icon-phone {
+                &::before {
+                    background: url('/img/icon_phone.png') no-repeat;
+                }
+            }
+
+            &.icon-mail {
+                &::before {
+                    background: url('/img/icon_mail.png') no-repeat;
+                }
+            }
+
+            &.icon-skype {
+                &::before {
+                    background: url('/img/icon_skype.png') no-repeat;
+                }
+            }
+        }
+    }
+}

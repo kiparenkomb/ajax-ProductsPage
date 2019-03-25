@@ -1,27 +1,33 @@
-/*
-Place for styles that concerns to the page itself
-*/
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Ubuntu', sans-serif;
     color: $main-color;
 }
+
 a {
     color: $red;
     text-decoration: none;
+    transition: text-decoration 0.3s;
     &:hover {
         text-decoration: underline;
     }
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 p,
 ul {
     margin-top: 0;
+}
+
+address {
+    font-style: inherit;
 }
