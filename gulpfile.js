@@ -10,11 +10,11 @@ const
 // sass tasks
 gulp.task('sass', () =>
     gulp.src('src/scss/main.scss')
-        .pipe(postcss([autoprefixer()]))
         .pipe(sass({
             sourceComments: false,
             outputStyle: 'compressed'
         }))
+        .pipe(postcss([autoprefixer()]))
         .pipe(gulp.dest('css/'))
 );
 
@@ -25,18 +25,6 @@ gulp.task('js', () =>
         .pipe(uglify())
         .pipe(gulp.dest('js/'))
 );
-
-// sass lint ftw(for better coding practices)
-gulp.task('sass_lint', lintCssTask = () => {
-    const gulpStylelint = require('gulp-stylelint');
-    return gulp
-        .src('src/scss/**/*.scss')
-        .pipe(gulpStylelint({
-            reporters: [
-                { formatter: 'string', console: true }
-            ]
-        }));
-});
 
 // images optimization works with jpeg, jpg, svg, gif, png
 gulp.task('images', () =>
