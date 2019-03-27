@@ -13,7 +13,7 @@ loadMoreButton.addEventListener('click', function() {
     }
 
     postAjax(
-        '/load.php', 'offset=' + $offset + '&' + 'limit=' + $limit,
+        '/server/load.php', 'offset=' + $offset + '&' + 'limit=' + $limit,
         function(data) {
             let productSet = JSON.parse(data);
 

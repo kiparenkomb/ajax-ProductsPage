@@ -15,12 +15,7 @@
 * [Yarn](https://yarnpkg.com)
 * ES6 thanks to [Babel](https://babeljs.io/)
 * [imagemin](https://github.com/sindresorhus/gulp-imagemin)
-* [stylelint](https://github.com/stylelint/stylelint)
-* [jshint](http://jshint.com/)
-* Run pre-commits for linting with [Husky](https://github.com/typicode/husky)
 
 ## Project Workflow
 
 All the development files are located in `src/` folder, please do not modify  any *css*, *js* or *img* from the *project root*, it will be overwritten.
-
-> When committing, a wild pre-commit will spawn and will check all your *js*, *sass* code quality, so you may need to install *jshint* client `npm install -g jshint`.
